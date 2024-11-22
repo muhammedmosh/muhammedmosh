@@ -1,0 +1,238 @@
+/* General Styles */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #a39f9f;
+    color: #fff;
+  }
+  
+  .navbar .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar .logo img {
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .navbar .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .navbar .nav-links li {
+    margin-left: 15px;
+    position: relative;
+  }
+  
+  .navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+  
+  .navbar .nav-links .btn {
+    background: #007BFF;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+  }
+  .navbar .nav-links .btn2 {
+    background: #827703;
+    padding: 10px 30px;
+    border-radius: 5px;
+    color: white;
+  }
+  .navbar .dropdown {
+    display: none;
+    position: absolute;
+    top: 30px;
+    list-style: none;
+    background: #9b9999;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .navbar .nav-links li:hover .dropdown {
+    display: block;
+  }
+  
+  .hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #f4f4f4;
+  }
+  
+  .hero-text h1 {
+    font-size: 3em;
+    color: #333;
+  }
+  .hero-section video {
+    max-width: 700px;
+    height: auto;
+    flex: 1 1 400px;
+    
+  }
+  
+  .hero-text .btn-primary {
+    padding: 10px 20px;
+    background: #999a9c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .features-section {
+    padding: 20px;
+    background: #f9f9f9;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .feature-item {
+    text-align: center;
+  }
+  
+  .cta-section {
+    padding: 30px;
+    background: #b79902;
+    color: white;
+    text-align: center;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #8a8989;
+    color: white;
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #8a8989;
+  }
+  .modal-content{
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0px 4px 10px #8a8989;
+    text-align: center;
+  }
+  .close{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #aaa;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .close:hover{
+    color: black;
+  }
+
+  form input{
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  form button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #2a9d8f;
+    color: white;
+    cursor: pointer;
+  }
+  form button:hover{
+    background-color: #21867a;
+  }
+
+
+  @media (max-width: 768px) {
+    header .navbar {
+      flex-direction: column;
+    }
+  
+    header .navbar ul {
+      flex-direction: column;
+      display: none;
+      background-color: #7e8180;
+      width: 100%;
+      text-align: center;
+      justify-content: space-between;
+    }
+  
+    header .navbar ul.show {
+      display: flex;
+    }
+  
+    .hero-section {
+      flex-direction: column;
+    }
+  
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    footer .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  /* Mobile Optimization */
+  @media (max-width: 480px) {
+    .hero-section .hero-text h1 {
+      font-size: 24px;
+    }
+  
+    .hero-section .hero-text p {
+      font-size: 16px;
+    }
+  
+    .features-grid .feature-item h3 {
+      font-size: 20px;
+    }
+  
+    .features-grid .feature-item p {
+      font-size: 14px;
+    }
+  
+    footer p {
+      font-size: 12px;
+    }
+  }
+  

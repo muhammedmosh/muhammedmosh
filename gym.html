@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gym/Exercise Planning</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="logo.png" alt="PlanIt Logo" />
+        <span>PlanIt</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="#">Personal Planning</a>
+          <ul class="dropdown">
+            <li><a href="gym.html">Gym/Exercise</a></li>
+            <li><a href="travel.html">Travel</a></li>
+            <li><a href="meeting.html">Meeting</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="others.html">More</a></li>
+          </ul>
+        </li>
+        <li><a href="tasks.html">Tasks</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html" class="btn">Get Started</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="planning-section">
+      <h1>Plan Your Gym/Exercise Routine</h1>
+      <form id="gym-form">
+        <input type="text" id="exercise-name" placeholder="Exercise Name" required />
+        <input type="number" id="duration" placeholder="Duration (minutes)" required />
+        <input type="date" id="exercise-date" required />
+        <button type="submit" class="btn">Add Exercise</button>
+      </form>
+      <div id="exercise-list"></div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>© 2024 PlanIt. All rights reserved.</p>
+  </footer>
+  
+  <script src="firebase.js"></script>
+  <script src="gym.js"></script>
+</body>
+</html>

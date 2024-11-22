@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasks - PlanIt</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="logo.png" alt="PlanIt Logo" />
+        <span>PlanIt</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="task-section">
+      <h1>Your Tasks</h1>
+      <form id="task-form">
+        <input type="text" id="task-title" placeholder="Task Title" required />
+        <input type="text" id="task-priority" placeholder="Priority (Low/Medium/High)" required />
+        <input type="date" id="task-deadline" required />
+        <button type="submit" class="btn">Add Task</button>
+      </form>
+      <div id="task-list"></div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>© 2024 PlanIt. All rights reserved.</p>
+  </footer>
+  
+  <script src="firebase.js"></script>
+  <script src="tasks.js"></script>
+</body>
+</html>
